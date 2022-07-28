@@ -2,7 +2,7 @@ class env{
     constructor(){
         this.hot = 1
         this.cold = 1
-        this.foodSpawn = 7
+        this.foodSpawn = 10
         this.isDamaged = 0
     }
 }
@@ -17,6 +17,7 @@ export class Grass extends env{
 export class Jungle extends env{
     constructor(){
         super()
+        this.foodSpawn = 20
         this.textureIdx = 1
         this.hot = 3
         this.cold = 3

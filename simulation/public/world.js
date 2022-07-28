@@ -249,7 +249,7 @@ export default class World{
                         this.prey= this.prey.filter((element)=>element.object!==p.object);
                         this.scene.remove(p.object)
                         // creature.food+=1
-                        creature.hp += (creature.efficiency/2) * creature.hpScale
+                        creature.hp += 2*(creature.efficiency/2) * creature.hpScale
                     }
                 }
                 if(creature.isChasing){
@@ -538,7 +538,6 @@ export default class World{
         if(minDistance==100 || each_creature.hp > each_creature.hpScale*2*(each_creature.efficiency/2)){
             direction = this.makeRandomDirec()
             each_creature.isChasing = false
-            
         }
         // 주위에 먹이가 있으면 가장 가까운 것을 저장한 nearlist 배열에서 랜덤하게 얻어서 그 방향으로 감
         else{
